@@ -8,7 +8,7 @@ authors = ["Jonas Pleyer <jonas.pleyer@fdm.uni-freiburg.de>"]
 serde = "1.0.197"
 rand = "0.8.5"
 rand_chacha = "0.3.1"
-cellular_raza = { path="../../cellular_raza/" }
+cellular_raza = { path="../../cellular_raza/", version="0.0.8" }
 nalgebra = "0.32.4"
 rayon = "1.9.0"
 num.workspace = true
