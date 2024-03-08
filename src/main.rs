@@ -96,7 +96,7 @@ fn run_simulation(simulation_settings: &SimulationSettings) -> Result<(), chili:
     let mut storage_priority = cellular_raza::prelude::UniqueVec::new();
     storage_priority.push(cellular_raza::prelude::StorageOption::SerdeJson);
     let storage_builder = cellular_raza::prelude::StorageBuilder::new()
-        .priority(storage_priority)
+        .priority(storage_priority);
 
     // Time Setup
     let t0: f32 = 0.0;
