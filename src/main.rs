@@ -1,7 +1,6 @@
 use cellular_raza::building_blocks::{
     BoundLennardJonesF32, CartesianCuboid2NewF32, NewtonDamped2DF32,
 };
-use cellular_raza::concepts::domain_new::Domain;
 use cellular_raza::concepts::{CalcError, CellAgent, Interaction, Mechanics, RngError, Volume};
 
 use cellular_raza::core::backend::chili;
@@ -55,10 +54,9 @@ struct Agent {
     pub volume: Vol,
 }
 
-fn main() -> Result<(), chili::SimulationError> {
+fn run_simulation(simulation_settings: &SimulationSettings) -> Result<(), chili::SimulationError> {
     use rand::Rng;
     let mut rng = rand_chacha::ChaCha8Rng::seed_from_u64(0);
-    let simulation_settings = SimulationSettings::default();
 
     // Agents setup
     let agent = Agent {
@@ -95,12 +93,11 @@ fn main() -> Result<(), chili::SimulationError> {
     )?;
 
     // Storage Setup
-    let location = std::path::Path::new("./out");
     let mut storage_priority = cellular_raza::prelude::UniqueVec::new();
     storage_priority.push(cellular_raza::prelude::StorageOption::SerdeJson);
     let storage_builder = cellular_raza::prelude::StorageBuilder::new()
         .priority(storage_priority)
-        .location(location);
+        .location("./out");
 
     // Time Setup
     let t0: f32 = 0.0;
@@ -112,14 +109,23 @@ fn main() -> Result<(), chili::SimulationError> {
         save_points.clone(),
     )?;
 
+    let settings = chili::Settings {
+        n_threads: simulation_settings.n_threads.try_into().unwrap(),
+        time: time_stepper,
+        storage: storage_builder,
+        show_progressbar: true,
+    };
+
     chili::run_simulation!(
         domain: domain,
         agents: agents,
-        time: time_stepper,
-        n_threads: simulation_settings.n_threads,
-        storage: storage_builder,
-        aspects: [Mechanics, Interaction],// TODO add cycle next
-        core_path: cellular_raza::core,
+        settings: settings,
+        aspects: [Mechanics, Interaction],
     )?;
     Ok(())
+}
+
+fn main() -> Result<(), chili::SimulationError> {
+    let simulation_settings = SimulationSettings::default();
+    run_simulation(&simulation_settings)
 }
