@@ -50,7 +50,7 @@ For more information see the [guide on python bindings](https://cellular-raza.co
 [1] │   └── basic.py
 [ ] ├── LICENSE
 [ ] ├── make.bat
-[1] ├── pyproject.toml
+[2] ├── pyproject.toml
 [1] ├── README.md
 [ ] ├── requirements.txt
 [ ] └── src
@@ -58,16 +58,17 @@ For more information see the [guide on python bindings](https://cellular-raza.co
 [ ]     └── main.rs
 ```
 
-| File/Folder | Change |
-|:---:| --- |
-| `Cargo.toml` | Change `name = ...` attributes under `[package]` and `[lib]` |
-|  | Change the dependency `cellular_raza = ...` to the most recent version. |
-| `cellular_raza_template_pyo3` | Change folder name and import statement in `__init__.py` |
-| `docs/conf.py` | Change `project = '...'` |
-| | Change import statement `import cellular_raza_template_pyo3` |
-| `docs/index.rst` | Change first directive `.. cellular_raza_template_pyo3 ...` |
-| | `cellular_raza_template_pyo3`<br>`========...` |
-| `examples/basic.py` | Change import statement `import cellular_raza_template_pyo3 as crt` |
-| `pyproject.toml` | Change `name = ...` |
-| `README.md` | Change title and remove this table when done. |
-| `src/lib.rs` | Change name of module `fn cellular_raza_template_pyo3_rs(m: ...` Notice that we use the suffix `_rs` to indicate that this is the rust-specific module. This is optional but needs to be adjusted in the corresponding `__init__.py` file. |
+| File/Folder | |
+|---| --- |
+| `Cargo.toml` | `name = ...` attributes under `[package]` and `[lib]` |
+| `Cargo.toml` | the dependency `cellular_raza = ...` to the most recent version. |
+| `cellular_raza_template_pyo3` | Folder name and import statement in `__init__.py` |
+| `docs/conf.py` | `project = '...'` |
+| `docs/conf.py` | import statement `import cellular_raza_template_pyo3` |
+| `docs/index.rst` | First directive `.. cellular_raza_template_pyo3 ...` |
+| `docs/index.rst` | Title `cellular_raza_template_pyo3` |
+| `examples/basic.py` | `import cellular_raza_template_pyo3 as crt` |
+| `pyproject.toml` | `name = ...` |
+| `pyproject.toml` | `module-name = "..."` |
+| `README.md` | Title and remove this table when done. |
+| `src/lib.rs` | Name of module `fn cellular_raza_template_pyo3_rs(m: ...` Notice that we use the suffix `_rs` to indicate that this is the rust-specific module. This is optional but needs to be adjusted in the corresponding `cellular_raza_template_pyo3/__init__.py` and `pyproject.toml` files. |
