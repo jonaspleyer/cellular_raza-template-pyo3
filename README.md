@@ -61,10 +61,10 @@ For more information see the [guide on python bindings](https://cellular-raza.co
 | File/Folder | |
 |---| --- |
 | `Cargo.toml` | `name = ...` attributes under `[package]` and `[lib]` |
-| `Cargo.toml` | the dependency `cellular_raza = ...` to the most recent version. |
+| `Cargo.toml` | Update the dependency `cellular_raza = ...` to the most recent version. |
 | `cellular_raza_template_pyo3` | Folder name and import statement in `__init__.py` |
 | `docs/conf.py` | `project = '...'` |
-| `docs/conf.py` | import statement `import cellular_raza_template_pyo3` |
+| `docs/conf.py` | Import statement `import cellular_raza_template_pyo3` |
 | `docs/index.rst` | First directive `.. cellular_raza_template_pyo3 ...` |
 | `docs/index.rst` | Title `cellular_raza_template_pyo3` |
 | `examples/basic.py` | `import cellular_raza_template_pyo3 as crt` |
