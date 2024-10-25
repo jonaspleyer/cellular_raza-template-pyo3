@@ -2,7 +2,11 @@
 name = "cellular_raza-template-pyo3"
 version = "0.1.0"
 edition = "2021"
-authors = ["Jonas Pleyer <jonas.pleyer@fdm.uni-freiburg.de>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "cellular_raza_template_pyo3"
+crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 serde = "1.0.197"
@@ -11,5 +15,5 @@ rand_chacha = "0.3.1"
 cellular_raza = { git="https://github.com/jonaspleyer/cellular_raza/" }
 nalgebra = "0.33"
 rayon = "1.9.0"
-num.workspace = true
-
+num = "0.4"
+pyo3 = "0.22.0"
