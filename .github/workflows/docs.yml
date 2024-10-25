@@ -46,7 +46,7 @@ jobs:
       - name: Sphinx build
         run: |
           source .venv/bin/activate
-          sphinx-build docs/source docs/build/html
+          sphinx-build docs/ docs/_build/html
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
