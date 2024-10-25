@@ -8,10 +8,10 @@
 
 import os
 import sys
-sys.path.append(os.path.abspath('../../'))
+sys.path.append(os.path.abspath('../'))
 import cellular_raza_template_pyo3
 
-project = 'cellular_raza_template_pyo3'
+project = 'cellular_raza-template-pyo3'
 copyright = '2024, Jonas Pleyer'
 author = 'Jonas Pleyer'
 release = '0.1.0'
