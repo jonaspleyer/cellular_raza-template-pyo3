@@ -10,8 +10,6 @@
 [![License: GPL 2.0](https://img.shields.io/github/license/jonaspleyer/cellular_raza-template-pyo3?style=flat-square)](https://opensource.org/license/gpl-2-0/)
 [![Test](https://img.shields.io/github/actions/workflow/status/jonaspleyer/cellular_raza-template-pyo3/test_stable.yml?label=Test&style=flat-square)](https://github.com/jonaspleyer/cellular_raza/actions)
 
-For more information see the [guide on python bindings](https://cellular-raza.com/guides) for
-`cellular_raza`.
 
 ## Usage
 
@@ -30,6 +28,9 @@ Afterwards, the package can be used in any python script
 ```python
 >>> import cellular_raza_template_pyo3 as crt
 ```
+
+For more information see the [guide on python bindings](https://cellular-raza.com/guides) for
+`cellular_raza`.
 
 ## List of files to change before using this template
 
