@@ -61,8 +61,7 @@ For more information see the [guide on python bindings](https://cellular-raza.co
 [1] ├── README.md
 [ ] ├── requirements.txt
 [ ] └── src
-[ ]     ├── lib.rs
-[ ]     └── main.rs
+[1]     └── lib.rs
 ```
 
 To use the workflow provided under `.github/workflows/docs.yml`, you need to enable
