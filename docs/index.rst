@@ -10,6 +10,10 @@ Add your content using ``reStructuredText`` syntax. See the
 `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
 documentation for details.
 
+.. automodule:: cellular_raza_template_pyo3
+   :members:
+   :undoc-members:
+   :imported-members:
 
 .. toctree::
    :maxdepth: 2
