@@ -36,7 +36,7 @@ For more information see the [guide on python bindings](https://cellular-raza.co
 
 ```bash
 [3] ├── Cargo.toml
-[1] ├── cellular_raza_template_pyo3 << change folder name
+[1] ├── cellular_raza_template_pyo3
 [1] │   └── __init__.py
 [ ] ├── docs
 [2] │   ├── conf.py
