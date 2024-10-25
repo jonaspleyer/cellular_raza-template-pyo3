@@ -39,7 +39,7 @@ For more information see the [guide on python bindings](https://cellular-raza.co
 [1] ├── cellular_raza_template_pyo3 << change folder name
 [1] │   └── __init__.py
 [ ] ├── docs
-[1] │   ├── conf.py
+[2] │   ├── conf.py
 [2] │   ├── index.rst
 [ ] │   ├── make.bat
 [ ] │   ├── Makefile
@@ -63,6 +63,7 @@ For more information see the [guide on python bindings](https://cellular-raza.co
 |  | Change the dependency `cellular_raza = ...` to the most recent version. |
 | `cellular_raza_template_pyo3` | Change folder name and import statement in `__init__.py` |
 | `docs/conf.py` | Change `project = '...'` |
+| | Change import statement `import cellular_raza_template_pyo3` |
 | `docs/index.rst` | Change first directive `.. cellular_raza_template_pyo3 ...` |
 | | `cellular_raza_template_pyo3`<br>`========...` |
 | `examples/basic.py` | Change import statement `import cellular_raza_template_pyo3 as crt` |
