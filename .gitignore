@@ -3,3 +3,5 @@ target
 out
 .venv
 docs/_build
+cellular_raza_template_pyo3/*.so
+cellular_raza_template_pyo3/__pycache__

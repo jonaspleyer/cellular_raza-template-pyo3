@@ -50,6 +50,11 @@ For more information see the [guide on python bindings](https://cellular-raza.co
 [ ] │   ├── requirements.txt
 [ ] ├── examples
 [1] │   └── basic.py
+[ ] ├── .github
+[ ] │   └── workflows
+[ ] │       ├── CI.yml
+[ ] │       └── docs.yml
+[2] ├── .gitignore
 [ ] ├── LICENSE
 [ ] ├── make.bat
 [2] ├── pyproject.toml
@@ -73,6 +78,8 @@ To use the workflow provided under `.github/workflows/docs.yml`, you need to ena
 | `docs/index.rst` | First directive `.. cellular_raza_template_pyo3 ...` |
 | `docs/index.rst` | Title `cellular_raza_template_pyo3` |
 | `examples/basic.py` | `import cellular_raza_template_pyo3 as crt` |
+| `.gitignore` | `cellular_raza_template_pyo3/*.so` |
+| `.gitignore` | `cellular_raza_template_pyo3/__pycache__` |
 | `pyproject.toml` | `name = ...` |
 | `pyproject.toml` | `module-name = "..."` |
 | `README.md` | Link to documentation |
