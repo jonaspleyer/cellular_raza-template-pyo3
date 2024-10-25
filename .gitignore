@@ -1,4 +1,5 @@
 Cargo.lock
 target
 out
-
+.venv
+docs/_build
