@@ -6,6 +6,11 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+import os
+import sys
+sys.path.append(os.path.abspath('../../'))
+import cellular_raza_template_pyo3
+
 project = 'cellular_raza_template_pyo3'
 copyright = '2024, Jonas Pleyer'
 author = 'Jonas Pleyer'
