@@ -9,6 +9,7 @@
 # cellular_raza-template-pyo3
 [![License: GPL 2.0](https://img.shields.io/github/license/jonaspleyer/cellular_raza-template-pyo3?style=flat-square)](https://opensource.org/license/gpl-2-0/)
 [![CI](https://img.shields.io/github/actions/workflow/status/jonaspleyer/cellular_raza-template-pyo3/CI.yml?label=CI&style=flat-square)](https://github.com/jonaspleyer/cellular_raza-template-pyo3/actions)
+![Docs](https://img.shields.io/github/actions/workflow/status/jonaspleyer/cellular_raza-template-pyo3/docs.yml?label=Docs&style=flat-square)
 
 
 ## Usage
