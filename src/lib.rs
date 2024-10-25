@@ -1,3 +1,7 @@
+#![deny(missing_docs)]
+//! This package is an example of how to construct python bindings with documentation with
+//! `cellular_raza <https://cellular-raza.com/>`_.
+
 use pyo3::prelude::*;
 
 use cellular_raza::building_blocks::{
@@ -13,17 +17,24 @@ use nalgebra::Vector2;
 use rand::SeedableRng;
 use serde::{Deserialize, Serialize};
 
+/// Contains settings needed to specify the simulation
 #[pyclass(get_all, set_all)]
 pub struct SimulationSettings {
+    /// Number of agents to initially put into the system
     pub n_agents: usize,
+    /// Overall domain size
     pub domain_size: f32,
+    /// Number of voxels to create subdivisions
     pub n_voxels: usize,
+    /// Number of threads used
     pub n_threads: usize,
+    /// Time increment used to solve the simulation
     pub dt: f32,
 }
 
 #[pymethods]
 impl SimulationSettings {
+    /// Creates a new :class:`SimulationSettings` class.
     #[new]
     fn new() -> Self {
         Self {
@@ -36,17 +47,26 @@ impl SimulationSettings {
     }
 }
 
+/// A cellular agent which is used in our simulation.
 #[pyclass]
 #[derive(CellAgent, Clone, Deserialize, Serialize)]
-struct Agent {
+pub struct Agent {
+    /// Used to integrate position and velocity of our agent
     #[Mechanics]
     pub mechanics: NewtonDamped2DF32,
+    /// Calculate interactions between agents
     #[Interaction]
     pub interaction: BoundLennardJonesF32,
 }
 
+/// Performs a complete numerical simulation of our system.
+///
+/// Args:
+///     simulation_settings(SimulationSettings): The settings required to run the simulation
 #[pyfunction]
-fn run_simulation(simulation_settings: &SimulationSettings) -> Result<(), chili::SimulationError> {
+pub fn run_simulation(
+    simulation_settings: &SimulationSettings,
+) -> Result<(), chili::SimulationError> {
     use rand::Rng;
     let mut rng = rand_chacha::ChaCha8Rng::seed_from_u64(0);
 
