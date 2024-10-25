@@ -11,6 +11,8 @@
 [![CI](https://img.shields.io/github/actions/workflow/status/jonaspleyer/cellular_raza-template-pyo3/CI.yml?label=CI&style=flat-square)](https://github.com/jonaspleyer/cellular_raza-template-pyo3/actions)
 ![Docs](https://img.shields.io/github/actions/workflow/status/jonaspleyer/cellular_raza-template-pyo3/docs.yml?label=Docs&style=flat-square)
 
+This templates automatically creates documentation under
+[jonaspleyer.github.io/cellular_raza-template-pyo3](https://jonaspleyer.github.io/cellular_raza-template-pyo3/).
 
 ## Usage
 
@@ -58,6 +60,9 @@ For more information see the [guide on python bindings](https://cellular-raza.co
 [ ]     └── main.rs
 ```
 
+To use the workflow provided under `.github/workflows/docs.yml`, you need to enable
+[publishing github pages from actions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+
 | File/Folder | |
 |---| --- |
 | `Cargo.toml` | `name = ...` attributes under `[package]` and `[lib]` |
@@ -70,5 +75,6 @@ For more information see the [guide on python bindings](https://cellular-raza.co
 | `examples/basic.py` | `import cellular_raza_template_pyo3 as crt` |
 | `pyproject.toml` | `name = ...` |
 | `pyproject.toml` | `module-name = "..."` |
+| `README.md` | Link to documentation |
 | `README.md` | Title and remove this table when done. |
 | `src/lib.rs` | Name of module `fn cellular_raza_template_pyo3_rs(m: ...` Notice that we use the suffix `_rs` to indicate that this is the rust-specific module. This is optional but needs to be adjusted in the corresponding `cellular_raza_template_pyo3/__init__.py` and `pyproject.toml` files. |
