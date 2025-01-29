@@ -12,7 +12,7 @@ crate-type = ["cdylib", "rlib"]
 serde = "1.0.197"
 rand = "0.8.5"
 rand_chacha = "0.3.1"
-cellular_raza = { git="https://github.com/jonaspleyer/cellular_raza/", features = ["pyo3"]}
+cellular_raza = { version = "*", path="../../cellular_raza/", features = ["pyo3"]}
 nalgebra = "0.33"
 rayon = "1.9.0"
 num = "0.4"
