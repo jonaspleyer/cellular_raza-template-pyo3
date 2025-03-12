@@ -16,4 +16,4 @@ cellular_raza = { version = "0.2", features = ["pyo3"]}
 nalgebra = "0.33"
 rayon = "1.9.0"
 num = "0.4"
-pyo3 = "0.22.0"
+pyo3 = "0.22"
