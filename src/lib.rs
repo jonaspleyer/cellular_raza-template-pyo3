@@ -90,8 +90,8 @@ pub fn run_simulation(
     let agents = (0..simulation_settings.n_agents).map(|_| {
         let mut new_agent = agent.clone();
         new_agent.set_pos(&Vector2::from([
-            rng.gen_range(0.0..domain_size),
-            rng.gen_range(0.0..domain_size),
+            rng.random_range(0.0..domain_size),
+            rng.random_range(0.0..domain_size),
         ]));
         new_agent
     });
