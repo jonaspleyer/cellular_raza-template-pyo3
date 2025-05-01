@@ -16,7 +16,7 @@ serde = "1.0"
 rand = "0.9"
 rand_chacha = "0.9"
 cellular_raza = { git="https://github.com/jonaspleyer/cellular_raza", features = ["pyo3"]}
-nalgebra = "0.33"
+nalgebra = { package="nalgebra-randv09", version="0.33" }
 rayon = "1.9.0"
 num = "0.4"
 pyo3 = { version = "0.24", features = ["extension-module"] }
