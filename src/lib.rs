@@ -6,7 +6,8 @@ use pyo3::prelude::*;
 
 use cellular_raza::building_blocks::{BoundLennardJonesF32, CartesianCuboid, NewtonDamped2DF32};
 use cellular_raza::concepts::{
-    CalcError, CellAgent, Interaction, Mechanics, Position, RngError, Velocity,
+    CalcError, CellAgent, Interaction, InteractionInformation, Mechanics, Position, RngError,
+    Velocity,
 };
 
 use cellular_raza::core::backend::chili;
